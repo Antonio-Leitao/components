@@ -1,5 +1,5 @@
 <script>
-  import { Info, Play, ChevronsDown, X } from "lucide-svelte";
+  import { Info, Play, ChevronsDown, X, Clipboard, List} from "lucide-svelte";
   export let name;
 </script>
 
@@ -11,4 +11,8 @@
   <svelte:component this={ChevronsDown} {...$$props} />
 {:else if name === "X"}
   <svelte:component this={ChevronsDown} {...$$props} />
+{:else if name === "clipboard"}
+  <svelte:component this={Clipboard} {...$$props} />
+{:else if name === "list"}
+  <svelte:component this={List} {...$$props} />
 {/if}
