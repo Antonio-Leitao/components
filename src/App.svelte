@@ -5,7 +5,7 @@
 </script>
 
 {#if $location !== undefined && $location !== "/"}
-  <a href="/#/">
+  <a href="/components/#/">
     <div class="back">
       <LucideIcon name="arrow-left" size=36/>
     </div>

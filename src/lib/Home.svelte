@@ -7,14 +7,14 @@
     {
       name: "Copy to Clipboard",
       description: "Click to copy text to clipboard",
-      href: "/#/copyclipboard",
+      href: "components/#/copyclipboard",
       icon: "clipboard",
       new: true,
     },
     {
       name: "Table of Contents",
       description: "Automatic TOC from json file",
-      href: "/#/toc",
+      href: "components/#/toc",
       icon: "list",
       new: true,
     },
