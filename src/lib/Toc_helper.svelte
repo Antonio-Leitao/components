@@ -1,12 +1,11 @@
 <script>
   import { fly } from "svelte/transition";
-  import { onMount } from "svelte";
   import { quintOut } from "svelte/easing";
   export let expanded = false;
   export let name;
   export let children;
+  import { ChevronUp, ChevronDown } from "lucide-svelte";
 
-  
   function toggle() {
     expanded = !expanded;
   }
@@ -14,15 +13,11 @@
 
 <span class:expanded on:click={toggle}
   >{name}
-  <svg
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    class="feather feather-chevron-down"
-    ><polyline points="6 9 12 15 18 9" /></svg
-  >
+  {#if expanded}
+    <ChevronUp />
+  {:else}
+    <ChevronDown />
+  {/if}
 </span>
 
 {#if expanded}
@@ -77,11 +72,5 @@
     margin: 0 0 0 0.5em;
     list-style: none;
     border-left: 1px solid #eee;
-  }
-
-  .feather {
-    fill: var(--offwhite);
-    stroke: var(--dark);
-    stroke-width: 0.1rem;
   }
 </style>

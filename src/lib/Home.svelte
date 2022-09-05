@@ -1,7 +1,4 @@
 <script>
-  import { fly } from "svelte/transition";
-  import { quintOut } from "svelte/easing";
-  import { each } from "svelte/internal";
   import { link } from "svelte-spa-router";
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
@@ -128,5 +125,9 @@
 
   .card:hover .circle {
     transform: scale(1.4);
+  }
+  a{
+    color:inherit;
+    font: inherit;
   }
 </style>

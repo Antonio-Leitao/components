@@ -1,5 +1,6 @@
 <script>
   import TocHelper from "./Toc_helper.svelte";
+  import LucideIcon from "./LucideIcon.svelte";
   const content = [
     {
       name: "API",
@@ -49,7 +50,11 @@
   ];
 
   const docs = {
-    featured: ["Getting Started", "Tutorials", "FAQ"],
+    featured: [
+      { name: "Getting Started", icon: "play" },
+      { name: "Tutorials", icon: "info" },
+      { name: "FAQ", icon: "list" },
+    ],
     content: content,
   };
 </script>
@@ -59,23 +64,9 @@
     <ul>
       {#each docs.featured as feature}
         <li class="featured-item">
-            <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-info"
-            ><circle cx="12" cy="12" r="10" /><line
-              x1="12"
-              y1="16"
-              x2="12"
-              y2="12"
-            /><line x1="12" y1="8" x2="12.01" y2="8" /></svg
-          >
-          <p>{feature}</p>
+          <LucideIcon name="{feature.icon}" size=20/>
+          <p>{feature.name}</p>
         </li>
-        
       {/each}
     </ul>
   </nav>
@@ -113,14 +104,11 @@
   .featured-item {
     cursor: pointer;
     border-radius: 0.45rem;
+    padding-left: 0.4rem;
   }
   .featured-item:hover {
     color: var(--highlight);
     background-color: rgba(109, 67, 90, 0.25); /* TEMPORARY SOLUTION*/
-  }
-  .featured-item:hover > .feather{
-    stroke: var(--highlight);
-    fill: rgba(109, 67, 90, 0); /* TEMPORARY SOLUTION*/
   }
 
   .chapter {
@@ -145,14 +133,8 @@
   p:hover {
     color: var(--highlight);
   }
-  .feather {
-    transform: scale(0.9);
-    fill: var(--offwhite);
-    stroke: var(--dark);
-    stroke-width: 0.1rem;
-  }
-li {
-    display:flex;
+  li {
+    display: flex;
     align-items: center;
-}
+  }
 </style>
