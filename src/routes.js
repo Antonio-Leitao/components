@@ -5,9 +5,9 @@ import Toc from './lib/Toc.svelte';
 import CopyClipboard from './lib/CopyClipboard.svelte';
 
 export default {
-    '/': Home,
-    '/copyclipboard':CopyClipboard,
-    '/toc':Toc,
+    'components/': Home,
+    'components/copyclipboard':CopyClipboard,
+    'components/toc':Toc,
     // The catch-all route must always be last
     '*': NotFound
 };
