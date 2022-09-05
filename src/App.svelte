@@ -1,11 +1,11 @@
 <script>
   import routes from "./routes";
-  import Router, { location } from "svelte-spa-router";
+  import Router, { location, link } from "svelte-spa-router";
   import LucideIcon from "./lib/LucideIcon.svelte";
 </script>
 
 {#if $location !== undefined && $location !== "/"}
-  <a href="/components/#/">
+  <a href="/" use:link>
     <div class="back">
       <LucideIcon name="arrow-left" size=36/>
     </div>

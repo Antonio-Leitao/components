@@ -2,19 +2,20 @@
   import { fly } from "svelte/transition";
   import { quintOut } from "svelte/easing";
   import { each } from "svelte/internal";
+  import { link } from "svelte-spa-router";
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
       name: "Copy to Clipboard",
       description: "Click to copy text to clipboard",
-      href: "components/#/copyclipboard",
+      href: "/copyclipboard",
       icon: "clipboard",
       new: true,
     },
     {
       name: "Table of Contents",
       description: "Automatic TOC from json file",
-      href: "components/#/toc",
+      href: "/toc",
       icon: "list",
       new: true,
     },
@@ -25,22 +26,24 @@
   <h1>Components</h1>
   <div class="component_grid">
     {#each components as component}
-      <div on:click={() => (location.href = component.href)} class="card">
-        {#if component.new}
-          <div class="contact">new</div>
-        {/if}
-        <div class="overview">
-          <div class="left">
-            <h2>{component.name}</h2>
-            <p>{component.description}</p>
-          </div>
-          <div class="right">
-            <div class="circle">
-              <LucideIcon name={component.icon} size=36/>
+      <a href="{component.href}" use:link>
+        <div class="card">
+          {#if component.new}
+            <div class="contact">new</div>
+          {/if}
+          <div class="overview">
+            <div class="left">
+              <h2>{component.name}</h2>
+              <p>{component.description}</p>
+            </div>
+            <div class="right">
+              <div class="circle">
+                <LucideIcon name={component.icon} size="36" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </a>
     {/each}
   </div>
 </div>
@@ -123,7 +126,7 @@
     margin-left: 3rem;
   }
 
-  .card:hover .circle{
+  .card:hover .circle {
     transform: scale(1.4);
   }
 </style>
