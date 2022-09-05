@@ -1,0 +1,18 @@
+:root {
+  --white: #fff;
+  --offwhite:#f7f7f4;
+  --gray:rgb(162, 162, 169);
+  --highlight:rgb(109, 67, 90);
+  --offdark:#1B2735;
+  --dark:#0E121A;
+  --black:#09050D;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+
+  color: var(--offdark);
+  background-color: var(--offwhite);
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+
