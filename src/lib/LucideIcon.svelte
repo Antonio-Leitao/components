@@ -1,5 +1,13 @@
 <script>
-  import { Info, Play, ChevronsDown, X, Clipboard, List} from "lucide-svelte";
+  import {
+    Info,
+    Play,
+    ChevronsDown,
+    X,
+    Clipboard,
+    List,
+    ArrowLeft,
+  } from "lucide-svelte";
   export let name;
 </script>
 
@@ -15,4 +23,6 @@
   <svelte:component this={Clipboard} {...$$props} />
 {:else if name === "list"}
   <svelte:component this={List} {...$$props} />
+{:else if name === "arrow-left"}
+  <svelte:component this={ArrowLeft} {...$$props} />
 {/if}

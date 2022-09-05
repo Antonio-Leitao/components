@@ -22,7 +22,7 @@
 </script>
 
 <div class="outer">
-  <h1>Home</h1>
+  <h1>Components</h1>
   <div class="component_grid">
     {#each components as component}
       <div on:click={() => (location.href = component.href)} class="card">
