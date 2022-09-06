@@ -3,10 +3,31 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Open Stack",
+      description: "Open stack of elements",
+      href: "/openstack",
+      icon: "library",
+      new: true,
+    },
+    {
+      name: "Flip Card",
+      description: "Card with flip animation on click",
+      href: "/flipcard",
+      icon: "flip-horizontal",
+      new: true,
+    },
+    {
+      name: "Card with Modal",
+      description: "Content card with modal on click",
+      href: "/modalcard",
+      icon: "file-up",
+      new: true,
+    },
+    {
       name: "Copy to Clipboard",
       description: "Click to copy text to clipboard",
       href: "/copyclipboard",
-      icon: "clipboard",
+      icon: "copy",
       new: true,
     },
     {
@@ -56,12 +77,13 @@
   .component_grid {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: left;
     width: 100%;
+    flex-wrap: wrap;
   }
   .card {
     cursor: pointer;
-    margin: auto;
+    margin: 0.5rem;
     background: #fefefe;
     border-radius: 5px;
     overflow: hidden;
@@ -99,10 +121,11 @@
   .overview {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: absolute;
     top: 1.8rem;
+    width:88%;
   }
   .overview .left h2 {
     margin: 0;

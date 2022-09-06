@@ -1,6 +1,6 @@
 <script>
   let toggled =false;
-  const text = "pip install -U scribe";
+  export const text = "pip install -U scribe";
 
   function handleClick(){
     toggled=true;
@@ -92,7 +92,6 @@
   .clicker-target button::after,
   .clicker-target button::before{
     position: absolute;
-    top: 0rem;
     background: var(--highlight);
     padding: 0.3rem;
     opacity: 0;
@@ -100,25 +99,24 @@
     background: var(--highlight);
     color: var(--offwhite);
   }
-  .clicker-target button::before {
+  .clicker-target button::after {
     content: "copied";
-    right: 0.2rem;
     border-radius: 0.2rem;
     font-weight: 100;
+    transform: translateX(-2.5rem) translateY(-0rem);
   }
 
-  .clicker-target button::after {
+  .clicker-target button::before {
     content: "";
-    right: 1.5rem;
-    transform: rotate(45deg);
+    transform: translateX(0.5rem) translateY(0rem) rotate(45deg);
   }
 
-  .clicker-target.active button::after {
-    top: -1.2rem;
+  .clicker-target.active button::before {
     opacity: 1;
+    transform: translateX(0.5rem) translateY(-1.7rem) rotate(45deg);
   }
-  .clicker-target.active button::before{
-    top: -2.5rem;
+  .clicker-target.active button::after{
     opacity: 1;
+    transform: translateX(-2.5rem) translateY(-3rem);
   }
 </style>

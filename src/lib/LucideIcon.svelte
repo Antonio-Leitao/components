@@ -7,6 +7,11 @@
     Clipboard,
     List,
     ArrowLeft,
+    Copy,
+    FileUp,
+    FlipHorizontal,
+    Library,
+    XOctagon,
   } from "lucide-svelte";
   export let name;
 </script>
@@ -25,4 +30,15 @@
   <svelte:component this={List} {...$$props} />
 {:else if name === "arrow-left"}
   <svelte:component this={ArrowLeft} {...$$props} />
+  {:else if name === "file-up"}
+  <svelte:component this={FileUp} {...$$props} />
+  {:else if name === "copy"}
+  <svelte:component this={Copy} {...$$props} />
+  {:else if name === "flip-horizontal"}
+  <svelte:component this={FlipHorizontal} {...$$props} />
+  {:else if name === "library"}
+  <svelte:component this={Library} {...$$props} />
+  {:else}
+  <svelte:component this={XOctagon} {...$$props} />
+  
 {/if}

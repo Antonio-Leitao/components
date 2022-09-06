@@ -16,12 +16,18 @@
 </div>
 
 <style>
-  .container {
+  .container{
+    margin-top:10rem;
+    display:grid;
+    place-items:center;
+    margin-bottom:5rem;
+  }
+  /* .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 
   .back {
     top: 2rem;
