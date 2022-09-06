@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Stack",
+      description: "A closed stack of elements",
+      href: "/stack",
+      icon: "layers",
+      new: true,
+    },
+    {
       name: "Open Stack",
       description: "Open stack of elements",
       href: "/openstack",

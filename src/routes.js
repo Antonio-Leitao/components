@@ -6,9 +6,11 @@ import CopyClipboard from './lib/CopyClipboard.svelte';
 import ModalCard from './lib/ModalCard.svelte';
 import FlipCard from './lib/FlipCard.svelte';
 import OpenStack from './lib/OpenStack.svelte';
+import Stack from './lib/Stack.svelte';
 
 export default {
     '/': Home,
+    '/stack': Stack,
     '/copyclipboard':CopyClipboard,
     '/modalcard':ModalCard,
     '/flipcard':FlipCard,

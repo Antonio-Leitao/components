@@ -12,6 +12,7 @@
     FlipHorizontal,
     Library,
     XOctagon,
+    Layers
   } from "lucide-svelte";
   export let name;
 </script>
@@ -38,6 +39,10 @@
   <svelte:component this={FlipHorizontal} {...$$props} />
   {:else if name === "library"}
   <svelte:component this={Library} {...$$props} />
+  {:else if name === "layers"}
+  <svelte:component this={Layers} {...$$props} />
+
+
   {:else}
   <svelte:component this={XOctagon} {...$$props} />
   
