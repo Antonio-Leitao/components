@@ -8,11 +8,13 @@ import FlipCard from './lib/FlipCard.svelte';
 import OpenStack from './lib/OpenStack.svelte';
 import Stack from './lib/Stack.svelte';
 import Layout from './lib/Layout.svelte';
+import Glass from './lib/Glass.svelte';
 
 export default {
     '/': Home,
     '/stack': Stack,
     '/layout':Layout,
+    '/glass':Glass,
     '/copyclipboard':CopyClipboard,
     '/modalcard':ModalCard,
     '/flipcard':FlipCard,

@@ -14,6 +14,7 @@
     XOctagon,
     Layers,
     Layout,
+    Glasses
   } from "lucide-svelte";
   export let name;
 </script>
@@ -44,6 +45,8 @@
   <svelte:component this={Layers} {...$$props} />
 {:else if name === "layout"}
   <svelte:component this={Layout} {...$$props} />
+  {:else if name === "glasses"}
+  <svelte:component this={Glasses} {...$$props} />
 {:else}
   <svelte:component this={XOctagon} {...$$props} />
 {/if}

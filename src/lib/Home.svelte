@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Glass",
+      description: "A set of glassmorphism styles",
+      href: "/glass",
+      icon: "glasses",
+      new: true,
+    },
+  {
       name: "Layout",
       description: "A scroll dynamic header and footer component",
       href: "/layout",
