@@ -12,7 +12,8 @@
     FlipHorizontal,
     Library,
     XOctagon,
-    Layers
+    Layers,
+    Layout,
   } from "lucide-svelte";
   export let name;
 </script>
@@ -31,19 +32,18 @@
   <svelte:component this={List} {...$$props} />
 {:else if name === "arrow-left"}
   <svelte:component this={ArrowLeft} {...$$props} />
-  {:else if name === "file-up"}
+{:else if name === "file-up"}
   <svelte:component this={FileUp} {...$$props} />
-  {:else if name === "copy"}
+{:else if name === "copy"}
   <svelte:component this={Copy} {...$$props} />
-  {:else if name === "flip-horizontal"}
+{:else if name === "flip-horizontal"}
   <svelte:component this={FlipHorizontal} {...$$props} />
-  {:else if name === "library"}
+{:else if name === "library"}
   <svelte:component this={Library} {...$$props} />
-  {:else if name === "layers"}
+{:else if name === "layers"}
   <svelte:component this={Layers} {...$$props} />
-
-
-  {:else}
+{:else if name === "layout"}
+  <svelte:component this={Layout} {...$$props} />
+{:else}
   <svelte:component this={XOctagon} {...$$props} />
-  
 {/if}

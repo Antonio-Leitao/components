@@ -1,5 +1,5 @@
 <script>
-    import { scale } from 'svelte/transition';
+    import { scale, fade } from 'svelte/transition';
     import { cubicOut } from 'svelte/easing';
    
      export let shown = false;
@@ -10,8 +10,8 @@
    </script>
    
    {#if shown}
-     <div class="backdrop">
-       <div in:scale={{ start: 0.5, duration: 200, opacity:0.2,easing:cubicOut}} class="modal">
+     <div class="backdrop" in:fade={{duration: 100}} out:fade={{duration: 100}}>
+       <div in:scale={{ start: 0.5, duration: 200,easing:cubicOut}} class="modal">
          <button on:click={() => toggle()} class="x">❌</button>
          <slot />
        </div>

@@ -7,10 +7,12 @@ import ModalCard from './lib/ModalCard.svelte';
 import FlipCard from './lib/FlipCard.svelte';
 import OpenStack from './lib/OpenStack.svelte';
 import Stack from './lib/Stack.svelte';
+import Layout from './lib/Layout.svelte';
 
 export default {
     '/': Home,
     '/stack': Stack,
+    '/layout':Layout,
     '/copyclipboard':CopyClipboard,
     '/modalcard':ModalCard,
     '/flipcard':FlipCard,

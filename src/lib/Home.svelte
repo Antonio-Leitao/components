@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Layout",
+      description: "A scroll dynamic header and footer component",
+      href: "/layout",
+      icon: "layout",
+      new: true,
+    },
+    {
       name: "Stack",
       description: "A closed stack of elements",
       href: "/stack",
