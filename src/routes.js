@@ -9,12 +9,14 @@ import OpenStack from './lib/OpenStack.svelte';
 import Stack from './lib/Stack.svelte';
 import Layout from './lib/Layout.svelte';
 import Glass from './lib/Glass.svelte';
+import Desktop from './lib/Desktop.svelte';
 
 export default {
     '/': Home,
     '/stack': Stack,
     '/layout':Layout,
     '/glass':Glass,
+    '/desktop':Desktop,
     '/copyclipboard':CopyClipboard,
     '/modalcard':ModalCard,
     '/flipcard':FlipCard,

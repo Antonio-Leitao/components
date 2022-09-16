@@ -3,13 +3,20 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Desktop",
+      description: "A Desktop-like with window management",
+      href: "/desktop",
+      icon: "copy",
+      new: true,
+    },
+    {
       name: "Glass",
       description: "A set of glassmorphism styles",
       href: "/glass",
       icon: "glasses",
       new: true,
     },
-  {
+    {
       name: "Layout",
       description: "A scroll dynamic header and footer component",
       href: "/layout",
@@ -35,28 +42,28 @@
       description: "Card with flip animation on click",
       href: "/flipcard",
       icon: "flip-horizontal",
-      new: true,
+      new: false,
     },
     {
       name: "Card with Modal",
       description: "Content card with modal on click",
       href: "/modalcard",
       icon: "file-up",
-      new: true,
+      new: false,
     },
     {
       name: "Copy to Clipboard",
       description: "Click to copy text to clipboard",
       href: "/copyclipboard",
-      icon: "copy",
-      new: true,
+      icon: "clipboard",
+      new: false,
     },
     {
       name: "Table of Contents",
       description: "Automatic TOC from json file",
       href: "/toc",
       icon: "list",
-      new: true,
+      new: false,
     },
   ];
 </script>
@@ -65,7 +72,7 @@
   <h1>Components</h1>
   <div class="component_grid">
     {#each components as component}
-      <a href="{component.href}" use:link>
+      <a href={component.href} use:link>
         <div class="card">
           {#if component.new}
             <div class="contact">new</div>
@@ -146,7 +153,7 @@
     align-items: center;
     position: absolute;
     top: 1.8rem;
-    width:88%;
+    width: 88%;
   }
   .overview .left h2 {
     margin: 0;
@@ -170,8 +177,8 @@
   .card:hover .circle {
     transform: scale(1.4);
   }
-  a{
-    color:inherit;
+  a {
+    color: inherit;
     font: inherit;
   }
 </style>
