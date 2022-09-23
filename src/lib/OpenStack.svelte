@@ -1,5 +1,5 @@
 <script>
-  import { link } from "svelte-spa-router";
+  import Control from "./Control.svelte";
   const cards = [
     { title: "Never Forget" },
     {
@@ -23,6 +23,13 @@
   ];
 </script>
 
+<div class="control">
+  <Control>
+    Number of cards:
+ </Control>
+</div>
+
+
 <section class="card-list">
   {#each cards as card}
     <article class="card">
@@ -32,6 +39,7 @@
     </article>
   {/each}
 </section>
+
 
 <style>
   .card-list {
@@ -71,5 +79,11 @@
 
   .card:not(:first-child) {
     margin-left: -100px;
+  }
+
+  .control{
+    position:absolute;
+    top: 7rem;
+    left: 2rem;
   }
 </style>

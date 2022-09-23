@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Mosaic",
+      description: "An image mosaic",
+      href: "/mosaic",
+      icon: "layout-grid",
+      new: true,
+    },
+    {
       name: "Desktop",
       description: "A Desktop-like with window management",
       href: "/desktop",

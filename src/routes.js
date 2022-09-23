@@ -10,6 +10,7 @@ import Stack from './lib/Stack.svelte';
 import Layout from './lib/Layout.svelte';
 import Glass from './lib/Glass.svelte';
 import Desktop from './lib/Desktop.svelte';
+import Mosaic from './lib/Mosaic.svelte';
 
 export default {
     '/': Home,
@@ -17,6 +18,7 @@ export default {
     '/layout':Layout,
     '/glass':Glass,
     '/desktop':Desktop,
+    '/mosaic' :Mosaic,
     '/copyclipboard':CopyClipboard,
     '/modalcard':ModalCard,
     '/flipcard':FlipCard,

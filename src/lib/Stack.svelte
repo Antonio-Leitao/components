@@ -1,7 +1,27 @@
 <script>
   export const title = "Primer on Algebraic topology";
-  export const count = 4;
+  export let count = 4;
+
+  import LucideIcon from "./LucideIcon.svelte";
+  import Control from "./Control.svelte";
 </script>
+
+<div class="control">
+  <Control>
+    <p>
+      Number of Cards
+    </p>
+    <span>
+    <button on:click={()=>count=Math.max(count-1,1)}>
+      -
+      </button>
+      {count}
+      <button on:click={()=>count=Math.min(count+1,10)}>
+        +
+      </button>
+    </span>
+ </Control>
+</div>
 
 <div class="stack">
   <div class="paper" style:--max-order="{count}">
@@ -12,6 +32,10 @@
     <div class="paper last" style:--order="{-i}" style:--max-order="{count-i-1}"/>
   {/each}
 </div>
+
+
+
+
 
 <style>
   h2 {
@@ -59,4 +83,11 @@
   .stack:hover >:not(:last-child) {
     transform: translateX(calc(-1*var(--max-order)*var(--offsetx))) translateY(calc(-1*var(--max-order)*var(--offsety)));
   }
+
+  .control{
+    position:absolute;
+    top: 7rem;
+    left: 2rem;
+  }
+
 </style>

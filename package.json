@@ -7,9 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy":"gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "gh-pages": "^4.0.0",
     "svelte": "^3.49.0",

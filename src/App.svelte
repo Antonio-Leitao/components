@@ -37,8 +37,8 @@
     background: #fefefe;
     border-radius: 5px;
     overflow: hidden;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 100%;
     position: absolute;
     display: flex;
