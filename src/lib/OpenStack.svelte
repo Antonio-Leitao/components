@@ -1,5 +1,6 @@
 <script>
   import Control from "./UI_componets/Control.svelte";
+  import Incrementer from "./UI_componets/Incrementer.svelte";
   const cards = [
     { title: "Never Forget" },
     {
@@ -25,7 +26,7 @@
 
 <div class="control">
   <Control>
-    Number of cards:
+    <Incrementer label={"Number of cards"}/>
  </Control>
 </div>
 

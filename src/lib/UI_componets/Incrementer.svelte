@@ -1,8 +1,8 @@
 <script>
   export let min = 0;
   export let max = 10;
-  let value = 0;
-  let label = "Number of Articles";
+  export let value = 0;
+  export let label = "Number of Articles";
 </script>
 
 <div class="input-group">

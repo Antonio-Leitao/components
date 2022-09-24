@@ -3,16 +3,28 @@
   import { randomUser } from "./scripts/fake_data.js";
 
 
-  const researchers = [];
+  let researchers = [];
   Array.from({ length: count }).forEach(() => {
     researchers.push(randomUser());
   });
  
+
+
   let n_blocks = Math.floor((researchers.length - 2) / 10);
   if ((researchers.length - 2) % 10 !== 0) {
     n_blocks += 1;
   }
+
+
+  import Control from "./UI_componets/Control.svelte";
+  import Incrementer from "./UI_componets/Incrementer.svelte";
 </script>
+
+<div class="control">
+  <Control>
+    <Incrementer label={"Number of items"} bind:value={count}/>
+ </Control>
+</div>
 
 <div class="mosaic-grid">
   <div class="line one">
@@ -139,6 +151,12 @@
     margin: -20px;
     box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2);
     z-index: 100;
+  }
+
+  .control{
+    position:absolute;
+    top: 7rem;
+    left: 2rem;
   }
 
 </style>

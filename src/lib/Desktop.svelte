@@ -10,7 +10,6 @@
 
   function reOrder(id) {
     let count = 0;
-    console.log(id);
     for (const property in indexes) {
       if (property === id) {
         continue;
@@ -22,14 +21,31 @@
     }
     indexes[id] += count;
   }
+
+  import Control from "./UI_componets/Control.svelte";
 </script>
 
+<div class="control">
+  <Control />
+</div>
 <div class="desktop">
-  {#each Object.entries(indexes) as window,i}
+  {#each Object.entries(indexes) as window, i}
     <div on:mousedown={() => reOrder(window[0])}>
-      <Window top={200+10*i} left={500+10*i} bind:zindex={indexes[window[0]]}>
+      <Window
+        top={200 + 10 * i}
+        left={500 + 10 * i}
+        bind:zindex={indexes[window[0]]}
+      >
         {window[0]}
       </Window>
     </div>
   {/each}
 </div>
+
+<style>
+  .control {
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
+  }
+</style>

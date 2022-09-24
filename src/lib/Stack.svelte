@@ -1,24 +1,18 @@
 <script>
-  export const title = "Primer on Algebraic topology";
+  export let title = "Primer on Algebraic Topology";
   export let count = 4;
 
+  //control imports
   import Control from "./UI_componets/Control.svelte";
+  import Incrementer from "./UI_componets/Incrementer.svelte";
+  import Input from "./UI_componets/Input.svelte";
 </script>
 
+<!-- Control HTML -->
 <div class="control">
   <Control>
-    <p>
-      Number of Cards
-    </p>
-    <span>
-    <button on:click={()=>count=Math.max(count-1,1)}>
-      -
-      </button>
-      {count}
-      <button on:click={()=>count=Math.min(count+1,10)}>
-        +
-      </button>
-    </span>
+  <Input bind:value={title} label={"Stack Name"}/>
+  <Incrementer bind:value={count} label={"Stack size"}/>
  </Control>
 </div>
 

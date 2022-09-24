@@ -46,12 +46,10 @@
   .wrapper {
     position: fixed;
     padding: 1rem 1rem 1rem 1rem;
-    min-width: 10rem;
-
-
+    
     min-height: 100px;
     width: fit-content;
-
+    min-width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

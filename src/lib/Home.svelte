@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Scroll Event",
+      description: "Scroll animations with svelte",
+      href: "/scroll",
+      icon: "mouse",
+      new: true,
+    },
+    {
       name: "Control",
       description: "Input UI components",
       href: "/control",

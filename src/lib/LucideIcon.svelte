@@ -18,6 +18,7 @@
     Palette,
     LayoutGrid,
     Paintbrush,
+    Mouse,
   } from "lucide-svelte";
   export let name;
 </script>
@@ -48,14 +49,16 @@
   <svelte:component this={Layers} {...$$props} />
 {:else if name === "layout"}
   <svelte:component this={Layout} {...$$props} />
-  {:else if name === "glasses"}
+{:else if name === "glasses"}
   <svelte:component this={Glasses} {...$$props} />
-  {:else if name === "palette"}
+{:else if name === "palette"}
   <svelte:component this={Palette} {...$$props} />
-  {:else if name === "layout-grid"}
+{:else if name === "layout-grid"}
   <svelte:component this={LayoutGrid} {...$$props} />
-  {:else if name === "paintbrush"}
+{:else if name === "paintbrush"}
   <svelte:component this={Paintbrush} {...$$props} />
+{:else if name === "mouse"}
+  <svelte:component this={Mouse} {...$$props} />
 {:else}
   <svelte:component this={XOctagon} {...$$props} />
 {/if}
