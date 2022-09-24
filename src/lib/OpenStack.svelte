@@ -1,5 +1,5 @@
 <script>
-  import Control from "./Control.svelte";
+  import Control from "./UI_componets/Control.svelte";
   const cards = [
     { title: "Never Forget" },
     {
@@ -68,19 +68,15 @@
     line-height: 1.25;
     transition: color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-
   .card:hover {
     transform: translateY(-1rem);
   }
-
   .card:hover ~ .card {
     transform: translateX(100px);
   }
-
   .card:not(:first-child) {
     margin-left: -100px;
   }
-
   .control{
     position:absolute;
     top: 7rem;

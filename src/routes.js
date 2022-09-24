@@ -11,6 +11,7 @@ import Layout from './lib/Layout.svelte';
 import Glass from './lib/Glass.svelte';
 import Desktop from './lib/Desktop.svelte';
 import Mosaic from './lib/Mosaic.svelte';
+import UI_example from './lib/UI_componets/UI_example.svelte';
 
 export default {
     '/': Home,
@@ -19,6 +20,7 @@ export default {
     '/glass':Glass,
     '/desktop':Desktop,
     '/mosaic' :Mosaic,
+    '/control':UI_example,
     '/copyclipboard':CopyClipboard,
     '/modalcard':ModalCard,
     '/flipcard':FlipCard,

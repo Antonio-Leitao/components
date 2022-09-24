@@ -2,8 +2,7 @@
   export const title = "Primer on Algebraic topology";
   export let count = 4;
 
-  import LucideIcon from "./LucideIcon.svelte";
-  import Control from "./Control.svelte";
+  import Control from "./UI_componets/Control.svelte";
 </script>
 
 <div class="control">

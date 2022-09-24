@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Control",
+      description: "Input UI components",
+      href: "/control",
+      icon: "palette",
+      new: true,
+    },
+    {
       name: "Mosaic",
       description: "An image mosaic",
       href: "/mosaic",
