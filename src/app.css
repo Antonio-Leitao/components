@@ -7,13 +7,19 @@
   --offdark:#1B2735;
   --dark:#0E121A;
   --black:#09050D;
+  --c-ash: #EEEEEE;
   font-family: Inter, Arial, Helvetica, sans-serif;
 
   color: var(--offdark);
   background-color: var(--offwhite);
+  background-color: var(--c-ash);
   margin:0px;
   padding:0px;
   box-sizing: border-box;
+}
+
+:root.dark{
+  --c-ash:red;
 }
 
 

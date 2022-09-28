@@ -2,8 +2,13 @@
   import routes from "./routes";
   import Router, { location, link } from "svelte-spa-router";
   import LucideIcon from "./lib/LucideIcon.svelte";
-</script>
+  import ModeToggle from "./lib/UI_componets/ModeToggle.svelte";
 
+</script>
+<div class="mode-toggle">
+  <ModeToggle />
+</div>
+<!-- <button on:click={toggleDarkMode}>Toggle Me</button> -->
 {#if $location !== undefined && $location !== "/"}
   <a href="/" use:link>
     <div class="back">
@@ -16,18 +21,14 @@
 </div>
 
 <style>
+
+
   .container{
     margin-top:10rem;
     display:grid;
     place-items:center;
     margin-bottom:5rem;
   }
-  /* .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } */
 
   .back {
     top: 2rem;
@@ -51,6 +52,12 @@
   .back:hover {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 2px 3px 12px rgba(0, 0, 0, 0.2);
     color: var(--highlight);
+  }
+
+  .mode-toggle{
+    position:absolute;
+    left: 90%;
+    top:2rem;
   }
 
   a{
