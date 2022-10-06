@@ -1,33 +1,46 @@
-
-import Home from './lib/Home.svelte';
-import NotFound from './lib/NotFound.svelte';
-import Toc from './lib/Toc.svelte';
-import CopyClipboard from './lib/CopyClipboard.svelte';
-import ModalCard from './lib/ModalCard.svelte';
-import FlipCard from './lib/FlipCard.svelte';
-import OpenStack from './lib/OpenStack.svelte';
-import Stack from './lib/Stack.svelte';
-import Layout from './lib/Layout.svelte';
-import Glass from './lib/Glass.svelte';
-import Desktop from './lib/Desktop.svelte';
-import Mosaic from './lib/Mosaic.svelte';
-import UI_example from './lib/UI_componets/UI_example.svelte';
-import ScrollAnimations from './lib/ScrollAnimations.svelte';
+import Home from "./lib/Home.svelte";
+import NotFound from "./lib/NotFound.svelte";
+import { wrap } from "svelte-spa-router/wrap";
 
 export default {
-    '/': Home,
-    '/stack': Stack,
-    '/layout':Layout,
-    '/glass':Glass,
-    '/desktop':Desktop,
-    '/scroll': ScrollAnimations,
-    '/mosaic' :Mosaic,
-    '/control':UI_example,
-    '/copyclipboard':CopyClipboard,
-    '/modalcard':ModalCard,
-    '/flipcard':FlipCard,
-    '/toc':Toc,
-    '/openstack': OpenStack,
-    // The catch-all route must always be last
-    '*': NotFound
+  "/": Home,
+
+  "/stack": wrap({
+    asyncComponent: () => import("./lib/Stack.svelte"),
+  }),
+  "/layout": wrap({
+    asyncComponent: () => import("./lib/Layout.svelte"),
+  }),
+  "/glass": wrap({
+    asyncComponent: () => import("./lib/Glass.svelte"),
+  }),
+  "/desktop": wrap({
+    asyncComponent: () => import("./lib/Desktop.svelte"),
+  }),
+  "/scroll": wrap({
+    asyncComponent: () => import("./lib/ScrollAnimations.svelte"),
+  }),
+  "/mosaic": wrap({
+    asyncComponent: () => import("./lib/Mosaic.svelte"),
+  }),
+  "/control": wrap({
+    asyncComponent: () => import("./lib/UI_componets/UI_example.svelte"),
+  }),
+  "/copyclipboard": wrap({
+    asyncComponent: () => import("./lib/CopyClipboard.svelte"),
+  }),
+  "/modalcard": wrap({
+    asyncComponent: () => import("./lib/ModalCard.svelte"),
+  }),
+  "/flipcard": wrap({
+    asyncComponent: () => import("./lib/FlipCard.svelte"),
+  }),
+  "/toc": wrap({
+    asyncComponent: () => import("./lib/Toc.svelte"),
+  }),
+  "/openstack": wrap({
+    asyncComponent: () => import("./lib/OpenStack.svelte"),
+  }),
+
+  "*": NotFound,
 };

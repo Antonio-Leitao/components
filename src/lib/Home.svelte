@@ -133,7 +133,7 @@
   .card {
     cursor: pointer;
     margin: 0.5rem;
-    background: #fefefe;
+    background: var(--bg-secondary);
     border-radius: 5px;
     overflow: hidden;
     width: 278px;
@@ -148,7 +148,7 @@
   }
 
   .card:hover {
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 2px 3px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--hover-shadow);
   }
 
   .contact {

@@ -1,5 +1,6 @@
 :root {
   --white: #fff;
+  --bg-secondary: #fefefe;
   --offwhite:#f7f7f4;
   --gray:rgb(162, 162, 169);
   --highlight:rgb(109, 67, 90);
@@ -7,11 +8,11 @@
   --offdark:#1B2735;
   --dark:#0E121A;
   --black:#09050D;
-  --c-ash: #EEEEEE;
+  --c-ash: #efeff0;
+  --hover-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 2px 3px 12px rgba(0, 0, 0, 0.2);
   font-family: Inter, Arial, Helvetica, sans-serif;
 
   color: var(--offdark);
-  background-color: var(--offwhite);
   background-color: var(--c-ash);
   margin:0px;
   padding:0px;
@@ -19,7 +20,27 @@
 }
 
 :root.dark{
-  --c-ash:red;
+  --background-deeper:#09050D;
+  --background-deep: #1E2227;
+  --background:#1B2735;
+
+
+  --white: #1B2735;
+  --offwhite:#f7f7f4;
+  --gray:#D7DAE0;
+  --highlight:rgb(109, 67, 90);
+  --highlight2: #FA8072;
+  --offdark:#1B2735;
+  --dark:#0E121A;
+  --black:#09050D;
+  --c-ash: #EEEEEE;
+  --bg-secondary: #23272E;
+  --hover-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 2px 3px 12px rgba(0, 0, 0, 0.3);
+
+  color: var(--gray);
+  background-color: var(--background-deep);
+  background-color: #14191f;
+
 }
 
 
