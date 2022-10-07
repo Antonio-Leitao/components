@@ -19,6 +19,8 @@
     LayoutGrid,
     Paintbrush,
     Mouse,
+    Hourglass,
+    Check,
   } from "lucide-svelte";
   export let name;
 </script>
@@ -59,6 +61,10 @@
   <svelte:component this={Paintbrush} {...$$props} />
 {:else if name === "mouse"}
   <svelte:component this={Mouse} {...$$props} />
+{:else if name === "hourglass"}
+  <svelte:component this={Hourglass} {...$$props} />
+{:else if name === "check"}
+  <svelte:component this={Check} {...$$props} />
 {:else}
   <svelte:component this={XOctagon} {...$$props} />
 {/if}

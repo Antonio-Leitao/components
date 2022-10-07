@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Hold Button",
+      description: "Button that requires holding for a set period of time",
+      href: "/holdbutton",
+      icon: "hourglass",
+      new: true,
+    },
+    {
       name: "Scroll Event",
       description: "Scroll animations with svelte",
       href: "/scroll",

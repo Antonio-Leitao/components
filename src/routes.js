@@ -41,6 +41,9 @@ export default {
   "/openstack": wrap({
     asyncComponent: () => import("./lib/OpenStack.svelte"),
   }),
+  "/holdbutton": wrap({
+    asyncComponent: () => import("./lib/UI_componets/HoldButton.svelte"),
+  }),
 
   "*": NotFound,
 };
