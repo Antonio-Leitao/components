@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "PDF Viewer",
+      description: "Shows pdf first page from url",
+      href: "/pdfviewer",
+      icon: "file text",
+      new: true,
+    },
+    {
       name: "Full Stack",
       description: "Interactive, constrained card stack with cover",
       href: "/fullstack",

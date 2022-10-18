@@ -47,6 +47,9 @@ export default {
   "/fullstack": wrap({
     asyncComponent: () => import("./lib/FullStack.svelte"),
   }),
+  "/pdfviewer": wrap({
+    asyncComponent: () => import("./lib/PDF.svelte"),
+  }),
 
   "*": NotFound,
 };

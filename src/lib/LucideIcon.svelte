@@ -21,6 +21,7 @@
     Mouse,
     Hourglass,
     Check,
+    FileText
   } from "lucide-svelte";
   export let name;
 </script>
@@ -65,6 +66,8 @@
   <svelte:component this={Hourglass} {...$$props} />
 {:else if name === "check"}
   <svelte:component this={Check} {...$$props} />
+{:else if name === "file text"}
+  <svelte:component this={FileText} {...$$props} />
 {:else}
   <svelte:component this={XOctagon} {...$$props} />
 {/if}
