@@ -3,6 +3,13 @@
   import LucideIcon from "./LucideIcon.svelte";
   const components = [
     {
+      name: "Full Stack",
+      description: "Interactive, constrained card stack with cover",
+      href: "/fullstack",
+      icon: "layers",
+      new: true,
+    },
+    {
       name: "Hold Button",
       description: "Button that requires holding for a set period of time",
       href: "/holdbutton",
