@@ -21,7 +21,9 @@
     Mouse,
     Hourglass,
     Check,
-    FileText
+    FileText,
+    Files,
+    Repeat
   } from "lucide-svelte";
   export let name;
 </script>
@@ -68,6 +70,10 @@
   <svelte:component this={Check} {...$$props} />
 {:else if name === "file text"}
   <svelte:component this={FileText} {...$$props} />
+{:else if name === "files"}
+  <svelte:component this={Files} {...$$props} />
+{:else if name === "repeat"}
+  <svelte:component this={Repeat} {...$$props} />
 {:else}
   <svelte:component this={XOctagon} {...$$props} />
 {/if}

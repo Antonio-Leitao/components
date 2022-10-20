@@ -8,12 +8,13 @@
 {#each { length: n_sections } as _, j}
   <ScrollComponent>
     <section>
-      <h1>
-        Section {j}
-      </h1>
+      <div class="block">
+        <h1>
+          Section {j}
+        </h1>
+      </div>
     </section>
   </ScrollComponent>
-
 
   <!-- <section
     use:inView={{ threshold: 0.5 }}
@@ -27,6 +28,13 @@
   section {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: 80vh;
+  }
+  .block {
+    display: grid;
+    place-items: center;
+    width: 12rem;
+    height: 12rem;
+    background-color: var(--white);
   }
 </style>

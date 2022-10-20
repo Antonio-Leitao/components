@@ -50,6 +50,12 @@ export default {
   "/pdfviewer": wrap({
     asyncComponent: () => import("./lib/PDF.svelte"),
   }),
+  "/fan": wrap({
+    asyncComponent: () => import("./lib/Fan.svelte"),
+  }),
+  "/loop": wrap({
+    asyncComponent: () => import("./lib/Loop.svelte"),
+  }),
 
   "*": NotFound,
 };
