@@ -4,7 +4,19 @@
   function randomFloat(start, end) {
     return Math.random() * (end - start) + start;
   }
+
+  import Control from "./UI_componets/Control.svelte";
+  import Incrementer from "./UI_componets/Incrementer.svelte";
+  import Input from "./UI_componets/Input.svelte";
 </script>
+
+<!-- Control HTML -->
+<div class="control">
+  <Control>
+    <Incrementer min={3} max={20} bind:value={n_cards} label={"Stack size"} />
+    <Incrementer min={30} max={90} bind:value={angle} label={"Angle"} />
+  </Control>
+</div>
 
 <div class="centering" style="--angle:{angle}deg;">
   {#each { length: n_cards } as _, i}
@@ -58,5 +70,10 @@
     transform-origin: center 120%;
     box-shadow: -15px 2px 15px rgba(0, 0, 0, 0.07),
       0px 0px 8px rgba(0, 0, 0, 0.07);
+  }
+  .control {
+    position: absolute;
+    top: 7rem;
+    left: 2rem;
   }
 </style>
